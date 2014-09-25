@@ -4,21 +4,7 @@ require 'sinatra'
 require 'geocoder'
 require 'timezone'
 
-get '/' do 
-	"Hello, Ruby"
-end
-get '/about' do
-	"There is something around!!!"
-end
-get '/hello/?:name?' do
-	"The word is: #{params[:name] ? params[:name] :'world'}"
-end
-get '/hi/?:tor?' do
-	torr = params[:tor]
-	"Hello #{torr ? torr :'Pass'}"
-end
-
-get '/time' do
+get '/' do
   erb :form
 end
  
